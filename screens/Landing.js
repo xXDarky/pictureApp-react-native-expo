@@ -58,7 +58,7 @@ export default function Landing({navigation}) {
              return (
                <View style={styles.container}>
                     <LinearGradient
-                        colors={['rgba(0,0,0,0.8)', '#666']}
+                        colors={['rgba(23,23,23,1) 16%', 'rgba(0,0,0,1) 67%', 'rgba(69,70,70,1) 100%']}
                         style={styles.background}
                     />
                     <Image
@@ -66,7 +66,7 @@ export default function Landing({navigation}) {
                         style={styles.thumbnail}
                     />
                     <Wrapper>
-                            <TextDescription>
+                            <TextDescription style={styles.description} >
                                 Use this image?
                             </TextDescription>
                             <ButtonWrapper>
@@ -75,7 +75,7 @@ export default function Landing({navigation}) {
                                         navigation.navigate('display', {
                                         imgUri: selectedImage.localUri  
                                         });}} title="Yes" />
-                                    <Button onPress={() => navigation.navigate('landing')} title="No" />
+                                    <Button onPress={() => navigation.push('landing')} title="No" />
                                 </Fragment>
                             </ButtonWrapper>
                         </Wrapper>
@@ -165,8 +165,8 @@ const styles = StyleSheet.create({
         height:'100%'
     },
     thumbnail: {
-        width: 300,
-        height: 300,
+        width: '50%',
+        height: '50%',
         resizeMode: "contain",
         alignSelf: 'center',
         top: 20
@@ -196,6 +196,10 @@ const styles = StyleSheet.create({
       netText:{
           position:'absolute',
           fontSize:10,
+      },
+      description:{
+          position: 'relative',
+          top:20
       }
 
     

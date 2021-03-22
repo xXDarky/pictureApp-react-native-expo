@@ -46,7 +46,7 @@ export default function Take({route, navigation}) {
     return(
         <View style={styles.container}> 
             <LinearGradient
-                colors={['rgba(0,0,0,0.8)', '#666']}
+                colors={['rgba(23,23,23,1) 16%', 'rgba(0,0,0,1) 67%', 'rgba(69,70,70,1) 100%']}
                 style={styles.background}
             />
             <Wrapper>
